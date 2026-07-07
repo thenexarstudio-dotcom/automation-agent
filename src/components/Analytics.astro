@@ -1,0 +1,9 @@
+---
+// Env-gated Plausible snippet — set PUBLIC_PLAUSIBLE_DOMAIN to your live
+// domain to activate. Left unset, this renders nothing (no tracking in dev
+// or before a domain exists). Swap for GA4 here if you prefer that instead.
+const domain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN ?? "";
+---
+{domain && (
+  <script is:inline defer data-domain={domain} src="https://plausible.io/js/script.js"></script>
+)}
