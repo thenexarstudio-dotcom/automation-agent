@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CTA from "@/components/CTA.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("comparisons");
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout title={entry.data.seoTitle} description={entry.data.seoDescription}>
+  <div class="mx-auto max-w-3xl px-5 py-14">
+    <header class="mb-8">
+      <h1 class="text-4xl leading-tight">{entry.data.title}</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">{entry.data.dek}</p>
+    </header>
+    <article class="prose-doc">
+      <Content />
+    </article>
+    <CTA
+      eyebrow="See it for yourself"
+      title="Get the Consultant Client Ops Kit"
+      body="8 documents covering the full client lifecycle — proposal through offboarding — for a single one-time price."
+    >
+      <GumroadButton product="kit" />
+    </CTA>
+  </div>
+</BaseLayout>

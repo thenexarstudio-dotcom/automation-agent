@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import ToolLayout from "@/layouts/ToolLayout.astro";
+import DayRateCalculator from "@/islands/DayRateCalculator";
+import ScopeCreepCalculator from "@/islands/ScopeCreepCalculator";
+import SOWGenerator from "@/islands/SOWGenerator";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("tools");
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const allTemplates = await getCollection("templates");
+const relatedTemplates = entry.data.relatedTemplates
+  .map((slug: string) => allTemplates.find((e) => e.slug === slug))
+  .filter(Boolean)
+  .map((t) => ({ href: `/templates/${t!.slug}`, label: t!.data.title }));
+---
+<ToolLayout
+  seoTitle={entry.data.seoTitle}
+  seoDescription={entry.data.seoDescription}
+  title={entry.data.title}
+  dek={entry.data.dek}
+  faq={entry.data.faq}
+  relatedTemplates={relatedTemplates}
+>
+  <Fragment slot="tool">
+    {entry.slug === "freelance-day-rate-calculator" && <DayRateCalculator client:load />}
+    {entry.slug === "scope-creep-cost-calculator" && <ScopeCreepCalculator client:load />}
+    {entry.slug === "sow-generator" && <SOWGenerator client:load />}
+  </Fragment>
+  <Content />
+</ToolLayout>

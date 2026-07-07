@@ -1,0 +1,57 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FAQAccordion from "@/components/FAQAccordion.astro";
+import CTA from "@/components/CTA.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+interface Props {
+  seoTitle: string;
+  seoDescription: string;
+  title: string;
+  dek: string;
+  product: "kit" | "ebook";
+  faq?: { q: string; a: string }[];
+  relatedTemplates?: { href: string; label: string }[];
+  relatedTool?: { href: string; label: string };
+}
+const { seoTitle, seoDescription, title, dek, product, faq = [], relatedTemplates = [], relatedTool } = Astro.props;
+---
+<BaseLayout title={seoTitle} description={seoDescription}>
+  <div class="mx-auto max-w-3xl px-5 py-14">
+    <header class="mb-8">
+      <h1 class="text-4xl leading-tight">{title}</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">{dek}</p>
+      <div class="mt-6">
+        <GumroadButton product={product} />
+      </div>
+    </header>
+
+    <article class="prose-doc">
+      <slot />
+    </article>
+
+    {(relatedTemplates.length > 0 || relatedTool) && (
+      <section class="mt-12 card p-6">
+        <h2 class="text-lg font-serif text-ink-950 mb-3">Related</h2>
+        <ul class="space-y-2 text-sm">
+          {relatedTool && (
+            <li><a href={relatedTool.href}>{relatedTool.label}</a> <span class="text-ink-300">— free tool</span></li>
+          )}
+          {relatedTemplates.map((t) => (
+            <li><a href={t.href}>{t.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <FAQAccordion items={faq} />
+
+    <CTA
+      eyebrow="Get the full kit"
+      title="Every document you need for a client engagement, done."
+      body="The Consultant Client Ops Kit bundles this template with 7 more — proposal through offboarding — so you never start from a blank page again."
+    >
+      <GumroadButton product="kit" />
+    </CTA>
+  </div>
+</BaseLayout>

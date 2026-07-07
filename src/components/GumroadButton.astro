@@ -1,0 +1,23 @@
+---
+// products.json is the single source of truth for Gumroad slugs/prices —
+// replace each gumroadSlug with the live Gumroad permalink before launch.
+import products from "@/data/products.json";
+
+interface Props {
+  product: "kit" | "ebook";
+  label?: string;
+  class?: string;
+}
+
+const { product, label, class: className = "" } = Astro.props;
+const p = products[product];
+const gumroadUrl = `https://gumroad.com/l/${p.gumroadSlug}`;
+---
+<a
+  href={gumroadUrl}
+  data-gumroad-single-product="true"
+  class={`no-underline inline-flex items-center justify-center gap-2 rounded-lg bg-brass-600 px-6 py-3 text-white font-medium hover:bg-brass-700 transition-colors ${className}`}
+>
+  {label ?? `Get ${p.name} — $${p.price}`}
+</a>
+<script is:inline src="https://gumroad.com/js/gumroad.js"></script>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FAQAccordion from "@/components/FAQAccordion.astro";
+import CTA from "@/components/CTA.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+interface Props {
+  seoTitle: string;
+  seoDescription: string;
+  title: string;
+  dek: string;
+  faq?: { q: string; a: string }[];
+  relatedTemplates?: { href: string; label: string }[];
+}
+const { seoTitle, seoDescription, title, dek, faq = [], relatedTemplates = [] } = Astro.props;
+---
+<BaseLayout title={seoTitle} description={seoDescription}>
+  <div class="mx-auto max-w-3xl px-5 py-14">
+    <header class="mb-8">
+      <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Free tool</p>
+      <h1 class="text-4xl leading-tight mt-1">{title}</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">{dek}</p>
+    </header>
+
+    <div class="card p-6 md:p-8">
+      <slot name="tool" />
+    </div>
+
+    <article class="prose-doc mt-10">
+      <slot />
+    </article>
+
+    {relatedTemplates.length > 0 && (
+      <section class="mt-12 card p-6">
+        <h2 class="text-lg font-serif text-ink-950 mb-3">Related templates</h2>
+        <ul class="space-y-2 text-sm">
+          {relatedTemplates.map((t) => (
+            <li><a href={t.href}>{t.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <FAQAccordion items={faq} />
+
+    <CTA
+      eyebrow="Skip the manual math"
+      title="Turn this number into a finished proposal in minutes."
+      body="The Consultant Client Ops Kit includes the proposal, SOW, and rate card templates built to match the numbers this tool gives you."
+    >
+      <GumroadButton product="kit" />
+    </CTA>
+  </div>
+</BaseLayout>

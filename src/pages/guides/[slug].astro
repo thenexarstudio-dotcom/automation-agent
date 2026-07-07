@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FAQAccordion from "@/components/FAQAccordion.astro";
+import CTA from "@/components/CTA.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("guides");
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout title={entry.data.seoTitle} description={entry.data.seoDescription}>
+  <div class="mx-auto max-w-3xl px-5 py-14">
+    <header class="mb-8">
+      <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Ebook</p>
+      <h1 class="text-4xl leading-tight mt-1">{entry.data.title}</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">{entry.data.dek}</p>
+      <div class="mt-6">
+        <GumroadButton product="ebook" />
+      </div>
+    </header>
+
+    <article class="prose-doc">
+      <Content />
+    </article>
+
+    <FAQAccordion items={entry.data.faq} />
+
+    <CTA
+      eyebrow="Pair it with the Kit"
+      title="Get the documents this book keeps referencing."
+      body="The Consultant Client Ops Kit is the ready-to-send version of every template mentioned in this ebook."
+    >
+      <GumroadButton product="kit" />
+    </CTA>
+  </div>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from "astro:content";
+import ProductLayout from "@/layouts/ProductLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("templates");
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const allTemplates = await getCollection("templates");
+const relatedTemplates = entry.data.relatedTemplates
+  .map((slug: string) => allTemplates.find((e) => e.slug === slug))
+  .filter(Boolean)
+  .map((t) => ({ href: `/templates/${t!.slug}`, label: t!.data.title }));
+
+let relatedTool: { href: string; label: string } | undefined;
+if (entry.data.relatedTool) {
+  const allTools = await getCollection("tools");
+  const tool = allTools.find((e) => e.slug === entry.data.relatedTool);
+  if (tool) relatedTool = { href: `/tools/${tool.slug}`, label: tool.data.title };
+}
+---
+<ProductLayout
+  seoTitle={entry.data.seoTitle}
+  seoDescription={entry.data.seoDescription}
+  title={entry.data.title}
+  dek={entry.data.dek}
+  product="kit"
+  faq={entry.data.faq}
+  relatedTemplates={relatedTemplates}
+  relatedTool={relatedTool}
+>
+  <Content />
+</ProductLayout>

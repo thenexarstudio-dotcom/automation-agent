@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+const templates = (await getCollection("templates")).sort((a, b) => a.data.order - b.data.order);
+const tools = await getCollection("tools");
+const blogPosts = (await getCollection("blog"))
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 3);
+---
+<BaseLayout
+  title="Templates & Tools for Freelance Client Operations | Consultant Client Ops"
+  description="Proposal, contract, scope of work, invoice, and pricing templates for freelancers and consultants — plus free calculators and an AI assistant to answer your questions."
+  path="/"
+>
+  <section class="mx-auto max-w-5xl px-5 pt-16 pb-14 text-center">
+    <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">For freelancers & independent consultants</p>
+    <h1 class="text-4xl md:text-5xl leading-tight mt-3 max-w-3xl mx-auto">
+      Run client work like a business, not a favor.
+    </h1>
+    <p class="mt-5 text-lg text-ink-500 max-w-2xl mx-auto">
+      Proposal, contract, scope of work, invoice, and pricing documents built specifically for solo consultants and
+      freelancers — so the next client engagement doesn't start from a blank page.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <GumroadButton product="kit" />
+      <a href="/tools/freelance-day-rate-calculator" class="no-underline text-ink-700 font-medium hover:text-brass-700">
+        Try the free rate calculator &rarr;
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-10">
+    <h2 class="text-2xl mb-6">The Consultant Client Ops Kit</h2>
+    <p class="text-ink-500 max-w-prose mb-8">
+      Eight documents covering the entire client lifecycle, from first proposal to final invoice. Use them individually
+      or as the full kit.
+    </p>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      {templates.map((t) => (
+        <a href={`/templates/${t.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
+          <p class="text-xs text-ink-300">{String(t.data.order).padStart(2, "0")}</p>
+          <p class="mt-1 font-medium text-ink-950">{t.data.title}</p>
+        </a>
+      ))}
+    </div>
+    <div class="mt-8">
+      <GumroadButton product="kit" label="Get all 8 documents — $39" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-10">
+    <h2 class="text-2xl mb-6">Free tools</h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+      {tools.map((t) => (
+        <a href={`/tools/${t.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
+          <p class="font-medium text-ink-950">{t.data.title}</p>
+          <p class="mt-1 text-sm text-ink-500">{t.data.dek}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-10">
+    <div class="card p-8 bg-white flex flex-col md:flex-row md:items-center gap-6 justify-between">
+      <div>
+        <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Ebook</p>
+        <h2 class="text-2xl mt-1">The Feast-or-Famine Fix</h2>
+        <p class="mt-2 text-ink-500 max-w-prose">
+          A freelancer's system for pricing, proposals, and a predictable client pipeline.
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <GumroadButton product="ebook" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-10">
+    <h2 class="text-2xl mb-6">From the blog</h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+      {blogPosts.map((p) => (
+        <a href={`/blog/${p.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
+          <p class="font-medium text-ink-950">{p.data.title}</p>
+          <p class="mt-2 text-sm text-ink-500">{p.data.dek}</p>
+        </a>
+      ))}
+    </div>
+    <div class="mt-6">
+      <a href="/freelance-client-operations">See the full client operations guide &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>
