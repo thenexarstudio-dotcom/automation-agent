@@ -1,7 +1,7 @@
 ---
 title: "Consulting Proposal Template"
 seoTitle: "Consulting Proposal Template (Free Preview) | Consultant Client Ops"
-seoDescription: "A consulting proposal template that gets signed faster: scope, timeline, investment, and terms in one document. Preview it free, or get all 8 client documents in the Kit."
+seoDescription: "A consulting proposal template that gets signed faster: scope, timeline, investment, and terms in one document. Preview free or get the full Kit."
 dek: "The document that turns a good sales conversation into a signed engagement — before the client has time to shop your price against three other freelancers."
 order: 1
 price: 39

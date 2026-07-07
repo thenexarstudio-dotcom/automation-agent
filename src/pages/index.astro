@@ -11,7 +11,7 @@ const blogPosts = (await getCollection("blog"))
 ---
 <BaseLayout
   title="Templates & Tools for Freelance Client Operations | Consultant Client Ops"
-  description="Proposal, contract, scope of work, invoice, and pricing templates for freelancers and consultants — plus free calculators and an AI assistant to answer your questions."
+  description="Proposal, contract, scope of work, invoice, and pricing templates for freelancers and consultants — plus free calculators for rates, scope, and retainers."
   path="/"
 >
   <section class="mx-auto max-w-5xl px-5 pt-16 pb-14 text-center">
@@ -34,19 +34,19 @@ const blogPosts = (await getCollection("blog"))
   <section class="mx-auto max-w-5xl px-5 py-10">
     <h2 class="text-2xl mb-6">The Consultant Client Ops Kit</h2>
     <p class="text-ink-500 max-w-prose mb-8">
-      Eight documents covering the entire client lifecycle, from first proposal to final invoice. Use them individually
+      Twelve documents covering the entire client lifecycle, from first proposal to final invoice. Use them individually
       or as the full kit.
     </p>
     <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
       {templates.map((t) => (
         <a href={`/templates/${t.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
-          <p class="text-xs text-ink-300">{String(t.data.order).padStart(2, "0")}</p>
+          <p class="text-xs text-ink-500">{String(t.data.order).padStart(2, "0")}</p>
           <p class="mt-1 font-medium text-ink-950">{t.data.title}</p>
         </a>
       ))}
     </div>
     <div class="mt-8">
-      <GumroadButton product="kit" label="Get all 8 documents — $39" />
+      <GumroadButton product="kit" label="Get all 12 documents — $39" />
     </div>
   </section>
 
@@ -87,7 +87,8 @@ const blogPosts = (await getCollection("blog"))
         </a>
       ))}
     </div>
-    <div class="mt-6">
+    <div class="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+      <a href="/blog">Browse all posts &rarr;</a>
       <a href="/freelance-client-operations">See the full client operations guide &rarr;</a>
     </div>
   </section>

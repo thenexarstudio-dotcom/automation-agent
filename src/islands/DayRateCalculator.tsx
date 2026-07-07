@@ -25,7 +25,7 @@ export default function DayRateCalculator() {
         <label class="block">
           <span class="text-sm font-medium text-ink-700">Annual income target</span>
           <div class="mt-1 flex items-center rounded-lg border border-ink-100 bg-ink-50 px-3">
-            <span class="text-ink-300">$</span>
+            <span class="text-ink-500">$</span>
             <input
               type="number"
               min={0}
@@ -48,15 +48,15 @@ export default function DayRateCalculator() {
               onInput={(e) => setBillableDays(Number((e.target as HTMLInputElement).value))}
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
-            <span class="text-ink-300 text-sm whitespace-nowrap">days / yr</span>
+            <span class="text-ink-500 text-sm whitespace-nowrap">days / yr</span>
           </div>
-          <span class="mt-1 block text-xs text-ink-300">After subtracting sales, admin, and time off — usually 100–140, not 220.</span>
+          <span class="mt-1 block text-xs text-ink-500">After subtracting sales, admin, and time off — usually 100–140, not 220.</span>
         </label>
 
         <label class="block">
           <span class="text-sm font-medium text-ink-700">Annual overhead</span>
           <div class="mt-1 flex items-center rounded-lg border border-ink-100 bg-ink-50 px-3">
-            <span class="text-ink-300">$</span>
+            <span class="text-ink-500">$</span>
             <input
               type="number"
               min={0}
@@ -66,7 +66,7 @@ export default function DayRateCalculator() {
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
           </div>
-          <span class="mt-1 block text-xs text-ink-300">Software, insurance, taxes, equipment.</span>
+          <span class="mt-1 block text-xs text-ink-500">Software, insurance, taxes, equipment.</span>
         </label>
 
         <label class="block">
@@ -79,7 +79,7 @@ export default function DayRateCalculator() {
               onInput={(e) => setProjectDays(Number((e.target as HTMLInputElement).value))}
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
-            <span class="text-ink-300 text-sm whitespace-nowrap">days</span>
+            <span class="text-ink-500 text-sm whitespace-nowrap">days</span>
           </div>
         </label>
       </div>
@@ -98,7 +98,7 @@ export default function DayRateCalculator() {
           <p class="text-2xl font-serif mt-1 text-ink-950">{formatUSD(projectPrice)}</p>
         </div>
       </div>
-      <p class="mt-4 text-xs text-ink-300">
+      <p class="mt-4 text-xs text-ink-500">
         Quote the project price as a single investment, not an hourly rate — see the Consulting Proposal Template for how to present it.
       </p>
     </div>

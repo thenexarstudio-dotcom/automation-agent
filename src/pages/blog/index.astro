@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+---
+<BaseLayout
+  title="Blog: Pricing, Proposals & Client Operations for Freelancers | Consultant Client Ops"
+  description="Practical guides on pricing freelance work, writing proposals and scopes of work, preventing scope creep, and running client engagements professionally."
+>
+  <div class="mx-auto max-w-5xl px-5 py-14">
+    <header class="mb-10">
+      <h1 class="text-4xl leading-tight">The blog</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">
+        Practical, specific guides on the operational side of freelancing — pricing, proposals, scope, and getting paid.
+      </p>
+    </header>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {posts.map((p) => (
+        <a href={`/blog/${p.slug}`} class="no-underline card p-6 hover:border-brass-400 transition-colors">
+          <p class="text-sm text-ink-500">
+            {new Date(p.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          </p>
+          <p class="mt-1 font-medium text-ink-950 text-lg">{p.data.title}</p>
+          <p class="mt-2 text-sm text-ink-500">{p.data.dek}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

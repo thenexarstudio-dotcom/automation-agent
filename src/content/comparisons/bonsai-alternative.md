@@ -23,7 +23,7 @@ If what you actually want is well-structured *documents* — a proposal, a contr
 | | Bonsai / HoneyBook / Dubsado | Consultant Client Ops Kit |
 |---|---|---|
 | Pricing | Monthly or annual subscription | One-time payment |
-| What you get | Integrated software platform | 8 ready-to-use documents |
+| What you get | Integrated software platform | 12 ready-to-use documents |
 | Where you use it | Inside their platform | Any tool you already use (Notion, Docs, Sheets, PDF) |
 | Automation (reminders, e-signature, scheduling) | Yes, built in | No — pair with your existing tools |
 | Best for | Freelancers who want one connected system | Freelancers who want strong documents without a new subscription |

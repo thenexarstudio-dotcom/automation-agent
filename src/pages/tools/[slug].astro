@@ -4,6 +4,7 @@ import ToolLayout from "@/layouts/ToolLayout.astro";
 import DayRateCalculator from "@/islands/DayRateCalculator";
 import ScopeCreepCalculator from "@/islands/ScopeCreepCalculator";
 import SOWGenerator from "@/islands/SOWGenerator";
+import RetainerCalculator from "@/islands/RetainerCalculator";
 
 export async function getStaticPaths() {
   const entries = await getCollection("tools");
@@ -31,6 +32,7 @@ const relatedTemplates = entry.data.relatedTemplates
     {entry.slug === "freelance-day-rate-calculator" && <DayRateCalculator client:load />}
     {entry.slug === "scope-creep-cost-calculator" && <ScopeCreepCalculator client:load />}
     {entry.slug === "sow-generator" && <SOWGenerator client:load />}
+    {entry.slug === "retainer-profitability-calculator" && <RetainerCalculator client:load />}
   </Fragment>
   <Content />
 </ToolLayout>

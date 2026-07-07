@@ -8,7 +8,7 @@ items:
   - q: "What format do the templates come in?"
     a: "Each template in the Consultant Client Ops Kit is delivered as a Notion template (duplicate into your own workspace) plus exported Google Docs/Sheets and PDF versions, so you can use whichever tool you already work in."
   - q: "Do I need the whole Kit, or can I buy templates individually?"
-    a: "The Consultant Client Ops Kit is sold as one bundle of all 8 documents — this keeps the price low per document and ensures the documents that reference each other (like the SOW and the Change Order) stay consistent."
+    a: "The Consultant Client Ops Kit is sold as one bundle of all 12 documents — this keeps the price low per document and ensures the documents that reference each other (like the SOW and the Change Order) stay consistent."
   - q: "Is there a subscription or is this a one-time purchase?"
     a: "One-time purchase. You buy the Kit or the ebook once and keep access to the files — no recurring fee."
 ---

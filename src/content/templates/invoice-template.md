@@ -1,7 +1,7 @@
 ---
 title: "Freelance Invoice Template"
 seoTitle: "Freelance Invoice Template That Gets Paid Faster | Consultant Client Ops"
-seoDescription: "A freelance invoice template built to get paid on time — clear terms, late fees, and the exact line items clients need to route it through AP without back-and-forth."
+seoDescription: "A freelance invoice template built to get paid on time — clear terms, late fees, and the line items AP needs to process it without back-and-forth."
 dek: "The invoice format that gets approved by accounts payable on the first pass instead of bouncing back with 'can you resend with a PO number.'"
 order: 6
 price: 39

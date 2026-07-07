@@ -1,7 +1,7 @@
 ---
 title: "Client Onboarding Questionnaire"
 seoTitle: "Client Onboarding Questionnaire Template | Consultant Client Ops"
-seoDescription: "A client onboarding questionnaire that front-loads the questions you'd otherwise ask three separate times during a project — access, expectations, and approvals."
+seoDescription: "A client onboarding questionnaire that front-loads the questions you'd otherwise drip-feed across the project — access, expectations, approvals."
 dek: "Ask every awkward logistics question once, up front, instead of drip-feeding them across the first two weeks of the engagement."
 order: 4
 price: 39

@@ -1,7 +1,7 @@
 ---
 title: "How to Write a Freelance Proposal That Actually Gets Signed"
 seoTitle: "How to Write a Freelance Proposal That Gets Signed | Consultant Client Ops"
-seoDescription: "The seven-section structure for a freelance or consulting proposal that closes reliably — situation, approach, deliverables, timeline, price, exclusions, next step."
+seoDescription: "The seven-section proposal structure that closes reliably — situation, approach, deliverables, timeline, price, exclusions, and next step."
 dek: "Most proposals fail before the client reaches the price. Here's the structure that doesn't."
 publishDate: "2026-01-26"
 relatedTemplates: ["consulting-proposal-template", "rate-card-template"]

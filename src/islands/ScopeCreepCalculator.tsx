@@ -20,7 +20,7 @@ export default function ScopeCreepCalculator() {
         <label class="block">
           <span class="text-sm font-medium text-ink-700">Your hourly-equivalent rate</span>
           <div class="mt-1 flex items-center rounded-lg border border-ink-100 bg-ink-50 px-3">
-            <span class="text-ink-300">$</span>
+            <span class="text-ink-500">$</span>
             <input
               type="number"
               min={0}
@@ -30,7 +30,7 @@ export default function ScopeCreepCalculator() {
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
           </div>
-          <span class="mt-1 block text-xs text-ink-300">Don't know it? Use the Day Rate Calculator first.</span>
+          <span class="mt-1 block text-xs text-ink-500">Don't know it? Use the Day Rate Calculator first.</span>
         </label>
 
         <label class="block">
@@ -44,7 +44,7 @@ export default function ScopeCreepCalculator() {
               onInput={(e) => setExtraHoursPerWeek(Number((e.target as HTMLInputElement).value))}
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
-            <span class="text-ink-300 text-sm whitespace-nowrap">hrs</span>
+            <span class="text-ink-500 text-sm whitespace-nowrap">hrs</span>
           </div>
         </label>
 
@@ -58,7 +58,7 @@ export default function ScopeCreepCalculator() {
               onInput={(e) => setProjectWeeks(Number((e.target as HTMLInputElement).value))}
               class="w-full bg-transparent py-2.5 px-2 outline-none text-ink-950"
             />
-            <span class="text-ink-300 text-sm whitespace-nowrap">weeks</span>
+            <span class="text-ink-500 text-sm whitespace-nowrap">weeks</span>
           </div>
         </label>
       </div>
@@ -77,7 +77,7 @@ export default function ScopeCreepCalculator() {
           <p class="text-2xl font-serif mt-1 text-ink-950">{formatUSD(annualizedLoss)}</p>
         </div>
       </div>
-      <p class="mt-4 text-xs text-ink-300">
+      <p class="mt-4 text-xs text-ink-500">
         The fix isn't refusing requests — it's pricing them. See the Scope of Work and Change Order templates for how to approve additions without absorbing them for free.
       </p>
     </div>

@@ -1,7 +1,7 @@
 ---
 title: "Freelance & Consulting Client Operations: The Complete Guide"
 seoTitle: "Freelance Client Operations: Templates, Tools & Systems | Consultant Client Ops"
-seoDescription: "Everything a freelancer or consultant needs to run client engagements professionally — proposals, contracts, scope management, invoicing, and pricing, with free tools and templates."
+seoDescription: "Everything freelancers and consultants need to run client engagements — proposals, contracts, scope, invoicing, and pricing, with free tools and templates."
 dek: "Every document and decision that stands between 'I do good work' and 'I run a business that doesn't depend on me chasing clients hourly.'"
 ---
 
@@ -14,15 +14,18 @@ Freelancing and consulting rarely fail because of the actual expertise — they 
 3. **Make it contractual** with a [Freelance Service Agreement](/templates/freelance-contract-template) that covers payment terms, IP, and termination.
 4. **Define the scope** precisely enough that requests outside it are obvious to both sides — the [Scope of Work Template](/templates/scope-of-work-template), or draft one instantly with the free [SOW Generator](/tools/sow-generator).
 5. **Onboard the client** with a [Client Onboarding Questionnaire](/templates/client-onboarding-questionnaire) so logistics don't eat your first week.
-6. **Handle new requests** with a [Change Order Template](/templates/change-order-template) instead of absorbing them for free — see what that's actually costing you with the [Scope Creep Cost Calculator](/tools/scope-creep-cost-calculator).
-7. **Get paid on time** with a properly structured [Invoice Template](/templates/invoice-template).
-8. **End well** with an [Offboarding Checklist](/templates/offboarding-checklist) that turns a project's end into a testimonial, a referral, and often the next engagement.
-9. **Price your next engagement higher** with a tiered [Rate Card Template](/templates/rate-card-template).
+6. **Start the work properly** with a [Project Kickoff Checklist](/templates/project-kickoff-checklist) — the difference between a project that starts moving in week one and one that spends it waiting on access.
+7. **Keep the client informed** with a [Weekly Client Update Template](/templates/weekly-client-update-template) that pre-empts the "how's it going?" check-in emails.
+8. **Handle new requests** with a [Change Order Template](/templates/change-order-template) instead of absorbing them for free — see what that's actually costing you with the [Scope Creep Cost Calculator](/tools/scope-creep-cost-calculator).
+9. **Get paid on time** with a properly structured [Invoice Template](/templates/invoice-template).
+10. **End well** with an [Offboarding Checklist](/templates/offboarding-checklist) and ready-to-send [Testimonial & Referral Request Scripts](/templates/testimonial-referral-request-scripts) that turn a project's end into the next engagement.
+11. **Convert good clients to recurring revenue** with a [Retainer Agreement Template](/templates/retainer-agreement-template) — and pressure-test the numbers first with the free [Retainer Profitability Calculator](/tools/retainer-profitability-calculator).
+12. **Price your next engagement higher** with a tiered [Rate Card Template](/templates/rate-card-template).
 
 ## Read the system behind it
 
 If you want the reasoning behind each of these — not just the documents — [The Feast-or-Famine Fix](/guides/feast-or-famine-fix) is a short, tactical ebook on pricing, proposals, and building a pipeline that doesn't run dry between projects.
 
-## Get all 8 templates at once
+## Get all 12 templates at once
 
 Every template above is included in the [Consultant Client Ops Kit](/templates/consulting-proposal-template) — one purchase, every document you need for a client engagement, from first proposal to final invoice.

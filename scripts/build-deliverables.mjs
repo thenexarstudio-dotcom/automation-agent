@@ -19,6 +19,10 @@ const kitDocs = [
   ["06-invoice-template", "Invoice Template"],
   ["07-offboarding-checklist", "Offboarding Checklist"],
   ["08-rate-card-template", "Rate Card Template"],
+  ["09-retainer-agreement-template", "Retainer Agreement Template"],
+  ["10-project-kickoff-checklist", "Project Kickoff Checklist"],
+  ["11-testimonial-referral-request-scripts", "Testimonial & Referral Request Scripts"],
+  ["12-weekly-client-update-template", "Weekly Client Update Template"],
 ];
 
 async function renderAll() {

@@ -12,7 +12,7 @@ const { items } = Astro.props;
         <details class="group py-4">
           <summary class="cursor-pointer list-none flex items-center justify-between font-medium text-ink-950">
             {item.q}
-            <span class="ml-4 text-ink-300 group-open:rotate-45 transition-transform">+</span>
+            <span class="ml-4 text-ink-500 group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-2 text-ink-700 leading-relaxed">{item.a}</p>
         </details>
@@ -21,12 +21,14 @@ const { items } = Astro.props;
   </section>
 )}
 
-<script is:inline type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: items.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
-  })),
-})} />
+{items.length > 0 && (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  })} />
+)}
