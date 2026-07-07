@@ -48,4 +48,5 @@ async function zipKit() {
 
 await renderAll();
 await zipKit();
+await run("node", ["scripts/render-og.mjs"]);
 console.log("Done.");
