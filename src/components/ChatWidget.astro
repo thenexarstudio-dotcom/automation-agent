@@ -1,21 +1,19 @@
 ---
 // v1: hosted embeddable AI chat widget (e.g. Chatbase), trained on src/content/faq/**
 // Fed the same markdown FAQ corpus authored for on-page FAQAccordion so there's one
-// source of truth for both surfaces. Swap CHATBOT_ID for the live embed ID before launch.
+// source of truth for both surfaces. Set PUBLIC_CHATBOT_ID to the live embed ID.
+// Config is injected as pre-serialized JSON (no define:vars — avoids the
+// GHSA-j687-52p2-xcff script-injection surface entirely); "<" is escaped so the
+// payload can never terminate the script tag early.
 // Fast-follow (not in initial scope): self-hosted RAG widget over the same FAQ corpus,
 // served from a Cloudflare Pages Function once traffic/cost justifies owning the stack.
 const CHATBOT_ID = import.meta.env.PUBLIC_CHATBOT_ID ?? "";
+const configJs = `window.embeddedChatbotConfig=${JSON.stringify({
+  chatbotId: CHATBOT_ID,
+  domain: "www.chatbase.co",
+}).replace(/</g, "\\u003c")};`;
 ---
-{CHATBOT_ID && (
-  <script
-    is:inline
-    define:vars={{ CHATBOT_ID }}
-    // eslint-disable-next-line
-    set:html={`
-      window.embeddedChatbotConfig = { chatbotId: CHATBOT_ID, domain: "www.chatbase.co" };
-    `}
-  />
-)}
+{CHATBOT_ID && <script is:inline set:html={configJs} />}
 {CHATBOT_ID && (
   <script is:inline defer src="https://www.chatbase.co/embed.min.js" data-chatbot-id={CHATBOT_ID} />
 )}
