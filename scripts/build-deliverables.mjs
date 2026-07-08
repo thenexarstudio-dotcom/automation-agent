@@ -40,14 +40,29 @@ async function renderAll() {
     `${EBOOK_DIR}/manuscript.md`,
     `${EBOOK_DIR}/feast-or-famine-fix.pdf`,
     "The Feast-or-Famine Fix",
+    "A freelancer's system for pricing, proposals, and a predictable client pipeline.",
   ]);
 }
 
+// Buyers get both formats: print-ready PDFs plus the editable markdown
+// sources (which import natively into Notion and Google Docs — the START-HERE
+// doc explains how). Zip layout: START-HERE.md at root, pdf/ and markdown/ dirs.
 async function zipKit() {
-  const zipPath = `${KIT_DIR}/consultant-client-ops-kit.zip`;
-  const files = (await readdir(`${KIT_DIR}/pdf`)).filter((f) => f.endsWith(".pdf"));
-  await run("zip", ["-j", "-X", zipPath, ...files.map((f) => `${KIT_DIR}/pdf/${f}`)]);
-  console.log(`Zipped ${zipPath}`);
+  const zipPath = "consultant-client-ops-kit.zip";
+  const stage = "consultant-client-ops-kit";
+  await run("rm", ["-rf", stage, `${KIT_DIR}/${zipPath}`]);
+  await mkdir(`${stage}/pdf`, { recursive: true });
+  await mkdir(`${stage}/markdown`, { recursive: true });
+  await run("cp", [`${KIT_DIR}/START-HERE.md`, `${stage}/START-HERE.md`]);
+  for (const f of (await readdir(`${KIT_DIR}/pdf`)).filter((f) => f.endsWith(".pdf"))) {
+    await run("cp", [`${KIT_DIR}/pdf/${f}`, `${stage}/pdf/${f}`]);
+  }
+  for (const [slug] of kitDocs) {
+    await run("cp", [`${KIT_DIR}/${slug}.md`, `${stage}/markdown/${slug}.md`]);
+  }
+  await run("zip", ["-r", "-X", `${KIT_DIR}/${zipPath}`, stage]);
+  await run("rm", ["-rf", stage]);
+  console.log(`Zipped ${KIT_DIR}/${zipPath}`);
 }
 
 await renderAll();
