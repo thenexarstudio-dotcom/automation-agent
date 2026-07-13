@@ -41,6 +41,10 @@ docs/keyword-map.csv      Target keyword → page mapping; keep current as the c
 8. **Seed traffic** — work through `docs/launch/community-seed-posts.md` (one community per day), then schedule the Product Hunt launch per `docs/launch/product-hunt-launch.md`.
 9. **Legal pass** — have a lawyer review the Service Agreement and Retainer Agreement templates (and the site's Terms) before ad spend or meaningful volume.
 
+## Autonomous content engine
+
+A scheduled Routine runs one iteration of the content loop each week: it drafts the next batch from `docs/content-backlog.json` (using sonnet sub-agents for drafting, opus-class judgment for review/integration), gates on a green `check`/`build`/link-check, and commits only if everything passes. Full runbook and how to pause/stop/re-cadence it: `docs/content-engine.md`. Steer it by editing the backlog JSON.
+
 ## Content cadence after launch (the growth engine)
 
 - **Months 1–2:** 2–3 new SEO pages/week (template landing pages and blog posts), 1 new sellable product every 2–3 weeks. Deepen this niche before adding another.

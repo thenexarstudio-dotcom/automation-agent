@@ -1,0 +1,47 @@
+{
+  "_comment": "Queue consumed by the autonomous content engine (see docs/content-engine.md). Each run takes the first batch whose \"status\" is \"pending\", produces it, and flips it to \"done\" in the same commit. Add new batches to the end. Keep batches small (<=4 templates+posts) to protect quality. Every slug must be distinct from what already exists and target a real search query — no filler.",
+  "existing_snapshot": {
+    "as_of": "2026-07-08",
+    "templates": 16,
+    "tools": 4,
+    "blog_posts": 13,
+    "comparisons": 3
+  },
+  "batches": [
+    {
+      "id": "batch-a",
+      "status": "pending",
+      "templates": [
+        { "slug": "freelance-quote-template", "title": "Freelance Quote Template", "keyword": "freelance quote template", "note": "A quick quote/estimate distinct from a full proposal; cross-link proposal + rate card." },
+        { "slug": "project-brief-template", "title": "Project Brief Template", "keyword": "project brief template", "note": "Client-facing brief to align on goals before scoping; cross-link onboarding questionnaire + SOW." }
+      ],
+      "posts": [
+        { "slug": "quote-vs-proposal-vs-estimate", "title": "Quote vs Proposal vs Estimate: What to Send and When", "keyword": "quote vs proposal", "relatedTool": "freelance-day-rate-calculator" },
+        { "slug": "how-to-write-a-project-brief", "title": "How to Write a Project Brief a Client Will Actually Approve", "keyword": "how to write a project brief" }
+      ]
+    },
+    {
+      "id": "batch-b",
+      "status": "pending",
+      "templates": [
+        { "slug": "milestone-payment-schedule-template", "title": "Milestone Payment Schedule Template", "keyword": "milestone payment schedule", "note": "Break a fixed fee into milestone-triggered invoices; cross-link invoice + contract." },
+        { "slug": "kill-fee-clause-template", "title": "Kill Fee Clause Template", "keyword": "kill fee clause", "note": "Protect income when a client cancels mid-project; cross-link contract + change order. Include not-legal-advice disclaimer." }
+      ],
+      "posts": [
+        { "slug": "milestone-payments-for-freelancers", "title": "Milestone Payments: How to Structure Them So You're Never Owed Too Much", "keyword": "milestone payments freelance", "relatedTool": "scope-creep-cost-calculator" },
+        { "slug": "what-is-a-kill-fee", "title": "What Is a Kill Fee, and How Much Should Yours Be?", "keyword": "what is a kill fee" }
+      ]
+    },
+    {
+      "id": "batch-c",
+      "status": "pending",
+      "comparisons": [
+        { "slug": "dubsado-alternative", "title": "Dubsado Alternative: Templates Without the Subscription", "keyword": "dubsado alternative" },
+        { "slug": "and-co-alternative", "title": "AND CO / Fiverr Workspace Alternative for Freelancers", "keyword": "and co alternative" }
+      ],
+      "posts": [
+        { "slug": "best-freelance-proposal-software-vs-templates", "title": "Freelance Proposal Software vs Templates: Which Is Worth It?", "keyword": "freelance proposal software", "relatedTool": "freelance-day-rate-calculator" }
+      ]
+    }
+  ]
+}
