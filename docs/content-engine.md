@@ -40,8 +40,10 @@ This keeps the expensive judgment model on the decisions that matter and the che
 - **Change cadence or batches:** edit the cron on the Routine, or edit `docs/content-backlog.json`.
 - The Routine sends a push/email summary after each run, so you always see what it did and can steer the backlog.
 
-The Routine id and current cadence are recorded at the bottom of this file when it's created.
+## Live Routine
 
----
-
-<!-- ROUTINE: weekly (Mon 09:00 UTC) content-engine iteration. Managed via the claude-code-remote Routines API. Pause/stop as described above. -->
+- **Trigger id:** `trig_01EMCF4c8qLDKHNJJpCfFoH2`
+- **Cadence:** weekly — Mondays 09:00 UTC (`0 9 * * 1`)
+- **Mode:** fresh session per fire, commits to `claude/digital-products-portfolio-90bh6x`
+- **Notifications:** push + email summary after every run
+- **Pause:** disable trigger `trig_01EMCF4c8qLDKHNJJpCfFoH2` · **Stop:** delete it · **Run now:** fire it on demand · **Re-cadence:** update its cron. (Ask this assistant, or use the Routines controls in your client.)
