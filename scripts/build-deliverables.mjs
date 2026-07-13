@@ -23,6 +23,10 @@ const kitDocs = [
   ["10-project-kickoff-checklist", "Project Kickoff Checklist"],
   ["11-testimonial-referral-request-scripts", "Testimonial & Referral Request Scripts"],
   ["12-weekly-client-update-template", "Weekly Client Update Template"],
+  ["13-discovery-call-script", "Discovery Call Script"],
+  ["14-project-completion-report", "Project Completion Report"],
+  ["15-freelance-nda-template", "Freelance NDA Template"],
+  ["16-late-payment-reminder-emails", "Late Payment Reminder Email Templates"],
 ];
 
 async function renderAll() {

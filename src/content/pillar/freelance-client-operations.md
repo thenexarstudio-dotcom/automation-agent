@@ -22,10 +22,12 @@ Freelancing and consulting rarely fail because of the actual expertise — they 
 11. **Convert good clients to recurring revenue** with a [Retainer Agreement Template](/templates/retainer-agreement-template) — and pressure-test the numbers first with the free [Retainer Profitability Calculator](/tools/retainer-profitability-calculator).
 12. **Price your next engagement higher** with a tiered [Rate Card Template](/templates/rate-card-template).
 
+Also in the Kit: a [Discovery Call Script](/templates/discovery-call-script) to qualify leads before you write a proposal, a [Freelance NDA Template](/templates/freelance-nda-template) for sensitive engagements, a [Project Completion Report](/templates/project-completion-report) that makes your results undeniable at handoff, and [Late Payment Reminder Emails](/templates/late-payment-reminder-emails) for the invoices that slip past due.
+
 ## Read the system behind it
 
 If you want the reasoning behind each of these — not just the documents — [The Feast-or-Famine Fix](/guides/feast-or-famine-fix) is a short, tactical ebook on pricing, proposals, and building a pipeline that doesn't run dry between projects.
 
-## Get all 12 templates at once
+## Get the full template library
 
 Every template above is included in the [Consultant Client Ops Kit](/templates/consulting-proposal-template) — one purchase, every document you need for a client engagement, from first proposal to final invoice.

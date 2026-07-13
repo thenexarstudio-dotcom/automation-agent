@@ -127,7 +127,7 @@ CHANGE PROCESS
       </div>
       <p class="mt-4 text-xs text-ink-500">
         This is a basic single-document draft. The full Scope of Work Template (in the Kit) adds assumptions, dependency
-        tracking, and contract-ready formatting across all 12 client documents.
+        tracking, and contract-ready formatting across the whole document library.
       </p>
     </div>
   );

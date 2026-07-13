@@ -3,7 +3,7 @@
 Copy-paste ready. Fields map to Gumroad's product editor.
 
 ## Name
-The Consultant Client Ops Kit — 12 Client Documents for Freelancers & Consultants
+The Consultant Client Ops Kit — 16 Client Documents for Freelancers & Consultants
 
 ## Price
 $39
@@ -21,7 +21,7 @@ Every client document from first proposal to final invoice — done. 12 fill-in-
 
 **Stop rebuilding the same documents for every client.**
 
-The Consultant Client Ops Kit is 12 professionally structured documents covering the entire client lifecycle — written specifically for freelancers and independent consultants, not adapted from corporate boilerplate.
+The Consultant Client Ops Kit is 16 professionally structured documents covering the entire client lifecycle — written specifically for freelancers and independent consultants, not adapted from corporate boilerplate.
 
 **What's inside:**
 
@@ -37,6 +37,10 @@ The Consultant Client Ops Kit is 12 professionally structured documents covering
 10. Project Kickoff Checklist — a week-one that actually moves
 11. Testimonial & Referral Request Scripts — word-for-word asks that get answered
 12. Weekly Client Update Template — pre-empt every "how's it going?" email
+13. Discovery Call Script — qualify a lead before you waste a proposal on it
+14. Project Completion Report — make your results undeniable at handoff
+15. Freelance NDA Template — a mutual NDA for sensitive engagements
+16. Late Payment Reminder Emails — three escalating, ready-to-send drafts
 
 **Formats:** print-ready PDFs + editable markdown files that import natively into Notion (Import → Text & Markdown) and Google Docs. A START-HERE guide walks you through setup in minutes.
 

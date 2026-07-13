@@ -30,6 +30,7 @@ const canonical = new URL(path, Astro.site);
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={new URL("/og/default.png", Astro.site)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="alternate" type="application/rss+xml" title="Consultant Client Ops Blog" href={new URL("/rss.xml", Astro.site)} />
     <Analytics />
   </head>
   <body>

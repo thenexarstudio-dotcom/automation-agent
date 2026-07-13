@@ -1,0 +1,9 @@
+---
+// Emits a JSON-LD structured-data block. Kept inline (is:inline) so Astro
+// doesn't try to process it, matching the FAQ schema in FAQAccordion.
+interface Props {
+  schema: unknown;
+}
+const { schema } = Astro.props;
+---
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

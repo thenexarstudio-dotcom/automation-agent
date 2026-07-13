@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://consultantclientops.com/sitemap-index.xml

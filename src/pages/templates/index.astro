@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+
+const templates = (await getCollection("templates")).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout
+  title="Freelance & Consulting Templates | Consultant Client Ops"
+  description="Every document in the Consultant Client Ops Kit — proposals, contracts, scopes, invoices, and more — built for freelancers and independent consultants."
+>
+  <div class="mx-auto max-w-5xl px-5 py-14">
+    <header class="mb-10">
+      <h1 class="text-4xl leading-tight">The templates</h1>
+      <p class="mt-3 text-lg text-ink-500 max-w-prose">
+        Every client document from first proposal to final invoice — each one previewable free, all included in the Kit.
+      </p>
+      <div class="mt-6"><GumroadButton product="kit" /></div>
+    </header>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {templates.map((t) => (
+        <a href={`/templates/${t.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
+          <p class="text-xs text-ink-500">{String(t.data.order).padStart(2, "0")}</p>
+          <p class="mt-1 font-medium text-ink-950">{t.data.title}</p>
+          <p class="mt-2 text-sm text-ink-500">{t.data.dek}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

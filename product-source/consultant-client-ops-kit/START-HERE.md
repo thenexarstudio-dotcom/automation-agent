@@ -4,7 +4,7 @@ Thanks for picking up the Kit. Here's what's inside and how to use it.
 
 ## What's in this download
 
-Each of the 12 documents comes in two formats:
+Each document in this Kit comes in two formats:
 
 - **`pdf/` folder** — polished, print-ready PDFs. Best for reference and for printing.
 - **`markdown/` folder** — the same documents as editable `.md` files. This is the format you'll actually work in.

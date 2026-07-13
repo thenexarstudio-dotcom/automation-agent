@@ -20,7 +20,7 @@ If you're a solo consultant or freelancer whose main friction is *the quality of
 |---|---|---|
 | Cost model | Monthly/annual subscription | One-time payment |
 | Setup | Migrate workflow into their platform | Use documents in tools you already have |
-| Scope | Full client-management platform | 12 specific client documents |
+| Scope | Full client-management platform | Every core client document |
 | Best fit | Teams/businesses wanting integrated automation | Solo freelancers who want sharper documents without new software |
 
 ## Bottom line

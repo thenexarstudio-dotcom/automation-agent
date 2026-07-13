@@ -7,7 +7,7 @@ relatedTemplates: ["scope-of-work-template", "change-order-template"]
 updated: "2026-07-07"
 faq:
   - q: "Is this the same as the full Scope of Work Template?"
-    a: "No — this generates a basic single-document draft from four fields. The full Scope of Work Template (in the Kit) adds assumptions, dependency tracking, revision policy language, and contract-ready formatting, plus the 11 other client documents it's designed to work alongside."
+    a: "No — this generates a basic single-document draft from four fields. The full Scope of Work Template (in the Kit) adds assumptions, dependency tracking, revision policy language, and contract-ready formatting, plus every other client document in the Kit it's designed to work alongside."
   - q: "Where does my data go?"
     a: "Nowhere — this runs entirely in your browser. Nothing you type is sent to a server or stored anywhere."
   - q: "Can I edit the downloaded file?"

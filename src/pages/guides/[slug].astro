@@ -4,6 +4,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import FAQAccordion from "@/components/FAQAccordion.astro";
 import CTA from "@/components/CTA.astro";
 import GumroadButton from "@/components/GumroadButton.astro";
+import JsonLd from "@/components/JsonLd.astro";
+import products from "@/data/products.json";
 
 export async function getStaticPaths() {
   const entries = await getCollection("guides");
@@ -12,8 +14,24 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: entry.data.title,
+  description: entry.data.dek,
+  brand: { "@type": "Brand", name: "Consultant Client Ops" },
+  offers: {
+    "@type": "Offer",
+    price: products.ebook.price,
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: `https://gumroad.com/l/${products.ebook.gumroadSlug}`,
+  },
+};
 ---
 <BaseLayout title={entry.data.seoTitle} description={entry.data.seoDescription}>
+  <JsonLd schema={productSchema} />
   <div class="mx-auto max-w-3xl px-5 py-14">
     <header class="mb-8">
       <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Ebook</p>
