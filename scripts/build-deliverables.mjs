@@ -27,6 +27,8 @@ const kitDocs = [
   ["14-project-completion-report", "Project Completion Report"],
   ["15-freelance-nda-template", "Freelance NDA Template"],
   ["16-late-payment-reminder-emails", "Late Payment Reminder Email Templates"],
+  ["17-freelance-quote-template", "Freelance Quote Template"],
+  ["18-project-brief-template", "Project Brief Template"],
 ];
 
 async function renderAll() {

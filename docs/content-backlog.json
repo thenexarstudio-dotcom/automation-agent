@@ -1,16 +1,16 @@
 {
   "_comment": "Queue consumed by the autonomous content engine (see docs/content-engine.md). Each run takes the first batch whose \"status\" is \"pending\", produces it, and flips it to \"done\" in the same commit. Add new batches to the end. Keep batches small (<=4 templates+posts) to protect quality. Every slug must be distinct from what already exists and target a real search query — no filler.",
   "existing_snapshot": {
-    "as_of": "2026-07-08",
-    "templates": 16,
+    "as_of": "2026-07-20",
+    "templates": 18,
     "tools": 4,
-    "blog_posts": 13,
+    "blog_posts": 15,
     "comparisons": 3
   },
   "batches": [
     {
       "id": "batch-a",
-      "status": "pending",
+      "status": "done",
       "templates": [
         { "slug": "freelance-quote-template", "title": "Freelance Quote Template", "keyword": "freelance quote template", "note": "A quick quote/estimate distinct from a full proposal; cross-link proposal + rate card." },
         { "slug": "project-brief-template", "title": "Project Brief Template", "keyword": "project brief template", "note": "Client-facing brief to align on goals before scoping; cross-link onboarding questionnaire + SOW." }

@@ -26,7 +26,7 @@ I built this after watching the same pattern kill freelance profitability over a
 - Retainer Profitability Calculator — is that retainer offer actually above your target rate?
 - SOW Generator — a clean scope-of-work draft in four fields
 
-**The paid stuff ($39, one-time):** 16 client documents — proposal, SOW, contract, change order, invoice, retainer, and more — as PDFs + markdown that imports straight into Notion.
+**The paid stuff ($39, one-time):** 18 client documents — proposal, SOW, contract, change order, invoice, retainer, and more — as PDFs + markdown that imports straight into Notion.
 
 Nothing here needs an account or sends your data anywhere; the calculators are fully client-side.
 
