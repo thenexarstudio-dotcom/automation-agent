@@ -25,7 +25,7 @@ const coverHtml = coverSubtitle
        <h1 class="cover-title">${docTitle}</h1>
        <div class="cover-rule"></div>
        <p class="cover-subtitle">${coverSubtitle}</p>
-       <p class="cover-foot">consultantclientops.com</p>
+       <p class="cover-foot">consultant-client-ops.netlify.app</p>
      </div>`
   : "";
 
@@ -94,7 +94,7 @@ const html = `<!doctype html>
 <body>
 ${coverHtml}
 ${bodyHtml}
-<p class="footer-note">Consultant Client Ops — consultantclientops.com — provided as a starting-point document, not legal advice.</p>
+<p class="footer-note">Consultant Client Ops — consultant-client-ops.netlify.app — provided as a starting-point document, not legal advice.</p>
 </body>
 </html>`;
 

@@ -1,3 +1,5 @@
+# Not currently used — the site deploys via Netlify (see netlify.toml).
+# Kept in case Cloudflare Pages is picked instead/in addition later.
 name = "consultant-client-ops"
 compatibility_date = "2026-07-07"
 pages_build_output_dir = "dist"

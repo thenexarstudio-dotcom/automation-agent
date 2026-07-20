@@ -19,7 +19,7 @@ The markdown files import cleanly into the tools you already use:
 
 ## Recommended first steps
 
-1. Start with **08-rate-card-template** and set your three tiers using your real numbers (the free Day Rate Calculator at consultantclientops.com/tools/freelance-day-rate-calculator helps here).
+1. Start with **08-rate-card-template** and set your three tiers using your real numbers (the free Day Rate Calculator at consultant-client-ops.netlify.app/tools/freelance-day-rate-calculator helps here).
 2. Adapt **01-consulting-proposal** and **03-service-agreement** once, with your standard terms, so every future client is a fill-in-the-blanks exercise.
 3. Keep **05-change-order** somewhere you can grab it fast — its value is in being sent the same day a client asks for "one more small thing."
 
@@ -33,4 +33,4 @@ The Service Agreement and Retainer Agreement are structured starting points refl
 
 ## Questions?
 
-The FAQ and chat assistant at consultantclientops.com cover licensing, formats, and product questions. For anything else, reply to your Gumroad receipt.
+The FAQ and chat assistant at consultant-client-ops.netlify.app cover licensing, formats, and product questions. For anything else, reply to your Gumroad receipt.

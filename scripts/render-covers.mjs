@@ -44,7 +44,7 @@ const covers = [
       <h1>The Consultant Client Ops Kit</h1>
       <p class="sub">Every client document from first proposal to final invoice — done, so you never start from a blank page again.</p>
       <div class="rule"></div>
-      <p class="foot">consultantclientops.com</p>
+      <p class="foot">consultant-client-ops.netlify.app</p>
       <p class="price">$39</p>`,
   },
   {
@@ -54,7 +54,7 @@ const covers = [
       <h1>The Feast-or-Famine Fix</h1>
       <p class="sub">A freelancer's system for pricing, proposals, and a predictable client pipeline.</p>
       <div class="rule"></div>
-      <p class="foot">consultantclientops.com</p>
+      <p class="foot">consultant-client-ops.netlify.app</p>
       <p class="price">$19</p>`,
   },
 ];

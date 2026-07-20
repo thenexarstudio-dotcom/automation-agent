@@ -35,7 +35,7 @@ const html = `<!doctype html>
   <p class="kicker">For freelancers &amp; independent consultants</p>
   <h1>Run client work like a business, not a favor.</h1>
   <div class="rule"></div>
-  <p class="foot">consultantclientops.com</p>
+  <p class="foot">consultant-client-ops.netlify.app</p>
 </body></html>`;
 
 await mkdir("public/og", { recursive: true });
