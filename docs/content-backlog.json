@@ -1,10 +1,10 @@
 {
   "_comment": "Queue consumed by the autonomous content engine (see docs/content-engine.md). Each run takes the first batch whose \"status\" is \"pending\", produces it, and flips it to \"done\" in the same commit. Add new batches to the end. Keep batches small (<=4 templates+posts) to protect quality. Every slug must be distinct from what already exists and target a real search query — no filler.",
   "existing_snapshot": {
-    "as_of": "2026-07-20",
-    "templates": 18,
+    "as_of": "2026-07-27",
+    "templates": 20,
     "tools": 4,
-    "blog_posts": 15,
+    "blog_posts": 17,
     "comparisons": 3
   },
   "batches": [
@@ -22,7 +22,7 @@
     },
     {
       "id": "batch-b",
-      "status": "pending",
+      "status": "done",
       "templates": [
         { "slug": "milestone-payment-schedule-template", "title": "Milestone Payment Schedule Template", "keyword": "milestone payment schedule", "note": "Break a fixed fee into milestone-triggered invoices; cross-link invoice + contract." },
         { "slug": "kill-fee-clause-template", "title": "Kill Fee Clause Template", "keyword": "kill fee clause", "note": "Protect income when a client cancels mid-project; cross-link contract + change order. Include not-legal-advice disclaimer." }

@@ -29,6 +29,8 @@ const kitDocs = [
   ["16-late-payment-reminder-emails", "Late Payment Reminder Email Templates"],
   ["17-freelance-quote-template", "Freelance Quote Template"],
   ["18-project-brief-template", "Project Brief Template"],
+  ["19-milestone-payment-schedule-template", "Milestone Payment Schedule Template"],
+  ["20-kill-fee-clause-template", "Kill Fee Clause Template"],
 ];
 
 async function renderAll() {
