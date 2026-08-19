@@ -39,6 +39,19 @@ In `product-source/ads/` (regenerate any time with `node scripts/render-ads.mjs`
 
 All claims are grounded in real product features — no invented testimonials, ratings, or counts. Keep it that way when you edit.
 
+### AI photographic creatives (Higgsfield)
+
+Generated with Higgsfield `marketing_studio_image`. These live in your **Higgsfield asset library** (this build session's network can't pull them into the repo, but your browser can open the URLs below to download). Each is shot with clean negative space for a text overlay — add the headline in your ad platform's editor or a quick Canva pass.
+
+| Concept | Ratio | Suggested use | Download |
+|---|---|---|---|
+| Editorial desk flatlay (documents + invoice) | 1:1 | Meta/IG feed — direct ($39 Kit) | https://d8j0ntlcm91z4.cloudfront.net/user_3HRYLjPsNYkUuWkH5uqdDyqALNq/hf_20260819_095026_62a4688c-e82a-4b74-8c2d-3078e9c36ba6.png |
+| Confident consultant at desk (lifestyle) | 3:4 | Meta/IG feed/stories — lead magnet | https://d8j0ntlcm91z4.cloudfront.net/user_3HRYLjPsNYkUuWkH5uqdDyqALNq/hf_20260819_095206_4671c9ed-c09a-42c2-a5f4-6ace2ef7182b.png |
+| Sticky-note chaos vs one tidy doc (scope creep) | 1:1 | Meta/IG — pain hook to free tool | https://d8j0ntlcm91z4.cloudfront.net/user_3HRYLjPsNYkUuWkH5uqdDyqALNq/hf_20260819_095026_de474fe2-fb6d-4945-aa84-e363b2ca0143.png |
+| Consultant reviewing docs, modern office | 16:9 | LinkedIn / FB link — direct | https://d8j0ntlcm91z4.cloudfront.net/user_3HRYLjPsNYkUuWkH5uqdDyqALNq/hf_20260819_095026_b7d77d14-b047-4131-ad9d-6c3504eab58c.png |
+
+Two creative styles to A/B test: the text-banner set in `product-source/ads/` (headline baked in, ready to upload as-is) and these photographic ones (add your own text overlay). Test one of each per ad set.
+
 ## Honest expectation on economics
 
 At a $39 one-time price and cold traffic, per-sale ad math is tight: Google Search in this niche can run $1–3+ per click, so even a 2–3% landing-page-to-purchase rate implies ~$40–150 spend per direct sale. That's why the lead-magnet path exists — capture the email cheaply, sell over time, and add a higher-ticket bundle later to lift average order value. Start with **small daily budgets** ($10–20/channel), measure cost-per-lead and cost-per-sale for ~1–2 weeks, then scale only what clears your target. Google Search (highest intent) is the best first bet; Meta lead-magnet second; LinkedIn last (most expensive).
