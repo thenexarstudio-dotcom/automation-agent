@@ -4,6 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion.astro";
 import CTA from "@/components/CTA.astro";
 import GumroadButton from "@/components/GumroadButton.astro";
 import JsonLd from "@/components/JsonLd.astro";
+import LeadCapture from "@/components/LeadCapture.astro";
 
 interface Props {
   seoTitle: string;
@@ -54,6 +55,8 @@ const breadcrumbSchema = {
     )}
 
     <FAQAccordion items={faq} />
+
+    <LeadCapture source="tool" class="mt-12" />
 
     <CTA
       eyebrow="Skip the manual math"

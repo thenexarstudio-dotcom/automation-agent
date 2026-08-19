@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GumroadButton from "@/components/GumroadButton.astro";
+---
+<BaseLayout
+  title="Your cheatsheet is ready | Consultant Client Ops"
+  description="Download your free Freelance Pricing & Proposal Cheatsheet."
+  noindex={true}
+>
+  <div class="mx-auto max-w-2xl px-5 py-20 text-center">
+    <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">You're in</p>
+    <h1 class="text-4xl leading-tight mt-3">Your cheatsheet is ready.</h1>
+    <p class="mt-4 text-lg text-ink-500">
+      Grab the PDF below. We'll also email you occasionally when we add new templates — no spam, unsubscribe anytime.
+    </p>
+    <div class="mt-8">
+      <a
+        href="/downloads/freelance-pricing-proposal-cheatsheet.pdf"
+        download
+        class="no-underline inline-flex items-center justify-center rounded-lg bg-ink-950 px-6 py-3 font-medium text-white hover:bg-ink-900"
+      >
+        Download the cheatsheet (PDF)
+      </a>
+    </div>
+
+    <div class="card p-8 mt-14 text-left">
+      <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Want the full versions?</p>
+      <h2 class="text-2xl font-serif text-ink-950 mt-1">The cheatsheet is the summary. The Kit is the fill-in-the-blank set.</h2>
+      <p class="mt-2 text-ink-500">
+        Every document the cheatsheet describes — proposal, contract, scope of work, invoice, change order, retainer, and
+        more — done and ready to send. One-time $39.
+      </p>
+      <div class="mt-5">
+        <GumroadButton product="kit" />
+      </div>
+    </div>
+
+    <p class="mt-10 text-sm text-ink-500">
+      Meanwhile, the <a href="/tools">free calculators</a> and <a href="/blog">the blog</a> are always open.
+    </p>
+  </div>
+</BaseLayout>

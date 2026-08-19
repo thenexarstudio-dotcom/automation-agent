@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LeadCapture from "@/components/LeadCapture.astro";
+
+const tools = await getCollection("tools");
+---
+<BaseLayout
+  title="Free Freelance Toolkit: Calculators + Cheatsheet | Consultant Client Ops"
+  description="Free tools for freelancers and consultants — a day-rate calculator, scope-creep and retainer calculators, an SOW generator, and a free pricing & proposal cheatsheet."
+  path="/free-toolkit"
+>
+  <section class="mx-auto max-w-3xl px-5 pt-16 pb-8 text-center">
+    <p class="text-brass-700 text-sm font-medium uppercase tracking-wide">Free · no signup for the tools</p>
+    <h1 class="text-4xl md:text-5xl leading-tight mt-3">
+      The free freelance toolkit.
+    </h1>
+    <p class="mt-5 text-lg text-ink-500 max-w-2xl mx-auto">
+      Everything you need to price a project, quote it, and get paid — without guessing. The calculators run in your
+      browser (nothing to install, nothing collected). The cheatsheet is a free download.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-6">
+    <LeadCapture source="free-toolkit" />
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-8">
+    <h2 class="text-2xl mb-5">The free calculators</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {tools.map((t) => (
+        <a href={`/tools/${t.slug}`} class="no-underline card p-5 hover:border-brass-400 transition-colors">
+          <p class="font-medium text-ink-950">{t.data.title}</p>
+          <p class="mt-1 text-sm text-ink-500">{t.data.dek}</p>
+        </a>
+      ))}
+    </div>
+    <p class="mt-8 text-ink-500">
+      When you're ready to stop rebuilding documents from scratch, the
+      <a href="/templates">Consultant Client Ops Kit</a> has the fill-in-the-blank versions of all 20 client documents.
+    </p>
+  </section>
+</BaseLayout>

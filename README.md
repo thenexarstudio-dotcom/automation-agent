@@ -43,6 +43,17 @@ docs/keyword-map.csv      Target keyword → page mapping; keep current as the c
 8. **Seed traffic** — work through `docs/launch/community-seed-posts.md` (one community per day), then schedule the Product Hunt launch per `docs/launch/product-hunt-launch.md`.
 9. **Legal pass** — have a lawyer review the Service Agreement, Retainer Agreement, and NDA templates (and the site's Terms) before ad spend or meaningful volume.
 
+## Sales funnel & ads
+
+Two funnels are built and live-ready:
+
+- **Direct:** product/template pages → Gumroad `$39` checkout.
+- **Lead magnet:** `/free-toolkit` → email capture via **Netlify Forms** (zero backend, no ESP needed to start) → `/thank-you` with an instant free cheatsheet download (`public/downloads/`). Emails collect in Netlify's Forms dashboard; the same capture also sits on every free-tool page. Connect an ESP later (Mailchimp/ConvertKit/Buttondown) to automate nurture — until then, export from Netlify.
+
+Ad copy (Google Search, Meta, LinkedIn) and ready-to-upload creatives live in `docs/ads/` and `product-source/ads/`. **Read `docs/ads/README.md` first** — it covers the launch order (funnel must be live before spend), honest per-sale economics at $39, and a suggested first-week test. Regenerate creatives with `node scripts/render-ads.mjs`; regenerate the cheatsheet by re-running `scripts/render-pdf.mjs` on `product-source/lead-magnet/`.
+
+After the first Netlify deploy, confirm **Forms** is enabled and a `lead-magnet` form appears (Netlify detects it from the deployed HTML).
+
 ## Autonomous content engine
 
 A scheduled Routine runs one iteration of the content loop each week: it drafts the next batch from `docs/content-backlog.json` (using sonnet sub-agents for drafting, opus-class judgment for review/integration), gates on a green `check`/`build`/link-check, and commits only if everything passes. Full runbook and how to pause/stop/re-cadence it: `docs/content-engine.md`. Steer it by editing the backlog JSON.
